@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <!-- Embed font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="register-container">
+        <div class="register-left">
+            <h1 class="register-title">WELCOME TO!</h1>
+            <img class="resgiter-image" src="./images/register.png" alt="Resgiter-image" />
+        </div>
+        <div class="register-right">
+            <div class="form-content">
+                <h1 class="form-title">CREATE YOUR ACCOUNT</h1>
+                <!-- Form -->
+                <form action="https://api-gateway.fullstack.edu.vn/action_page.php" class="form" autocomplete="off"
+                    enctype="multipart/form-data">
+                    <!-- Profile Picture -->
+                    <div class="form-group">
+                        <label>
+                            <span class="form-label">Profile Picture</span>
+                            <img class="profile-img" src="images/avatar_placeholder.png" alt="Choose your avatar..." />
+                            <input type="file" name="profilePicture" id="profile-picture" hidden />
+                        </label>
+                    </div>
+                    <!-- Profile Picture -->
+                    <div class="form-group">
+                        <label>
+                            <span class="form-label required">Display Name</span>
+                            <input type="text" class="text-input" spellcheck="false" required
+                                placeholder="Your display name..." />
+                        </label>
+                    </div>
+                    <!-- Mail -->
+                    <div class="form-group">
+                        <label>
+                            <span class="form-label required">Email</span>
+                            <input type="email" class="text-input" spellcheck="false" required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your email address..." />
+                        </label>
+                    </div>
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label>
+                            <span class="form-label required">Phone Number</span>
+                            <input type="tel" class="text-input" spellcheck="false" required pattern="\d{10}"
+                                placeholder="Your phone number..." />
+                        </label>
+                    </div>
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label>
+                            <span class="form-label required">Password</span>
+                            <input type="password" class="text-input" spellcheck="false" required
+                                placeholder="Your password..." />
+                        </label>
+                    </div>
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+                        <label>
+                            <span class="form-label required">Confirm Password</span>
+                            <input type="password" class="text-input" spellcheck="false" minlength="8"
+                                placeholder="Re-Enter your password..." required />
+                        </label>
+                    </div>
+                    <!-- Gender -->
+                    <div class="form-group">
+                        <span class="form-label">Gender</span>
+                        <div class="gender-radio">
+                            <label class="radio"><input type="radio" name="gender" value="male" checked /> Male</label>
+                            <label class="radio"><input type="radio" name="gender" value="female" /> Female</label>
+                            <label class="radio"><input type="radio" name="gender" value="other" /> Other</label>
+                        </div>
+                    </div>
+                    <!-- Date of birth -->
+                    <div class="form-group">
+                        <label>
+                            <span class="form-label">Date of Birth</span>
+                            <input class="text-input" type="date" />
+                        </label>
+                    </div>
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label>
+                            <span class="form-label">Address</span>
+                            <input type="text" class="text-input" spellcheck="false" placeholder="Your address..." />
+                        </label>
+                    </div>
+
+                    <button class="btn">CREATE ACCOUNT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
